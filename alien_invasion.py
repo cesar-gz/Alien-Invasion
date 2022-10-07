@@ -19,6 +19,11 @@ class AlienInvasion:
         """Initialize the game, and create game resources."""
         pygame.init()
 
+        # Make Sound
+        bgMusic = pygame.mixer.Channel(2)
+        pygame.mixer.music.load('music/Keep On Movin by King Crayon.mp3')
+        pygame.mixer.music.play(-1)
+
         # screen size will be 1200 width by 800 height
         # self.screen = pygame.display.set_mode((1200, 800))
 
