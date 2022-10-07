@@ -1,5 +1,6 @@
 # How to play
+run the alien_invasion.py file in the terminal
 
-1)run the alien_invasion.py file
+Click Play, press space bar to shoot lasers, and Q to quit the game
 
-Press space bar to shoot and Q to quit
+![alt text](https://i.ibb.co/XL8PT4F/alien-invasion.png)
