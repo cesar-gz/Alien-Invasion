@@ -5,7 +5,7 @@ from ship import Ship
 
 class Scoreboard:
     """A class to report scoring information."""
-    
+
     def __init__(self, ai_game):
         """Initialize scorekeeping attributes."""
         self.ai_game = ai_game
@@ -15,7 +15,7 @@ class Scoreboard:
         self.stats = ai_game.stats
 
         # Font settings for scoring information.
-        self.text_color = (30, 30, 30)
+        self.text_color = (0, 255, 0)
         self.font = pygame.font.SysFont(None, 48)
 
         # Prepare the initial score images.
@@ -71,7 +71,7 @@ class Scoreboard:
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
-    
+
     def prep_ships(self):
         """Show how many ships are left."""
         self.ships = Group()

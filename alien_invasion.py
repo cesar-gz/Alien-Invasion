@@ -29,12 +29,6 @@ class AlienInvasion:
 
         self.settings = Settings()
 
-        """
-        self.screen = pygame.display.set_mode(
-            (self.settings.screen_width, self.settings.screen_height)
-            )
-        """
-
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         #self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
@@ -70,7 +64,7 @@ class AlienInvasion:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
-            
+
             self._update_screen()
 
 
@@ -83,7 +77,7 @@ class AlienInvasion:
 
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
-                
+
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
 
@@ -123,7 +117,7 @@ class AlienInvasion:
         """Update position of bullets and get rid of old bullets."""
         # Update bullet positions.
         self.bullets.update()
-        
+
         # Get rid of bullets that have disappeared.
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
@@ -206,7 +200,7 @@ class AlienInvasion:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
-    
+
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
         if len(self.bullets) < self.settings.bullets_allowed:
@@ -266,7 +260,7 @@ class AlienInvasion:
 
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
-        
+
         if self.stats.ships_left > 0:
             # Decrement ships_left, and update scoreboard.
             self.stats.ships_left -= 1
@@ -285,7 +279,7 @@ class AlienInvasion:
         else:
             self.stats.game_active = False
             pygame.mouse.set_visible(True)
-                
+
 
 if __name__ == '__main__':
        # Make a game instance, and run the game.
